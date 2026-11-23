@@ -51,3 +51,25 @@ lives — built in, not bolted on.
     replaced, so the system can grow without accumulating parts that no
     longer have a reason to exist. Once a replacement is verified, the
     old is retired just as easily.
+11. **Concurrency.** Concurrency means maximizing the resources at
+    hand: not scaling to bigger machines, but wasting nothing on the
+    one you have — every core, every cycle accounted for.
+12. **Safety.** Safety is built by construction: pieces are designed so
+    illegal or undesirable states simply can't be represented — if the
+    bad state can't exist, no rule is needed against it. The security
+    model follows the same honesty: never claim unbreachable — lay out
+    the reasons breaching is unprofitable, so it costs more to breach
+    than the breach is worth.
+13. **Modularity.** Homogeneous and modular at once: the system speaks
+    one design language — uniform principles, contracts, and
+    interfaces — while every component is a replaceable module.
+    Extending functionality means designing, building, and installing a
+    new module suited to your workflow, without breaking the
+    homogeneous whole. Homogeneity in the contract, modularity in the
+    parts.
+14. **User experience.** Never regress the user experience: system
+    changes must enhance it or at least keep it at the norm — UX
+    regressions are never acceptable. "We do not break userspace" is
+    not just about the kernel ABI; the user's workflow is a contract.
+    Security, modularity, and concurrency never get to bill the user in
+    broken workflows.
