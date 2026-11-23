@@ -16,6 +16,8 @@ where the design is open, the documents say so.
 
 ## Start here
 
+- [Principles & philosophy](PRINCIPLES.md) — the guiding principles
+  every design in this repository is answerable to.
 - [Architecture design](ARCHITECTURE.md) — the whole system in one
   document: principles, core shape, packaging, AI policy, compatibility,
   hardware, governance, and an honest list of what is still open.
@@ -24,6 +26,7 @@ where the design is open, the documents say so.
 
 | Document | Status |
 |---|---|
+| [Principles & philosophy](PRINCIPLES.md) | Settled, living |
 | [Architecture design](ARCHITECTURE.md) | Draft — 2026-11-22, living |
 | [Transport Chain](docs/transport-chain-2026-11-14.md) | Endorsed design |
 | [Repetition Chain — recurring updates test](docs/repetition-chain-updates-test-2026-11-14.md) | Filed test candidate |
