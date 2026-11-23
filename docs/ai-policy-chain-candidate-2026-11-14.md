@@ -1,7 +1,7 @@
 # AI policy chain — candidate (2026-11-14)
 
 Status: **candidate / exploration** — raised by Chris in main chat,
-Sat Nov 14, 2026 (~23:15 PT), during the Hermes/Artex agent-security
+Sat Nov 14, 2026 (~23:15 PT), during the agent-security
 pass. Hedged in his own words ("should probably", "might be of
 interest") — recorded as an open design direction, not a settled
 principle. Promotion is Chris's call, in the Trinity design thread.
