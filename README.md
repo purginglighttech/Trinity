@@ -21,6 +21,9 @@ where the design is open, the documents say so.
 - [Architecture design](ARCHITECTURE.md) — the whole system in one
   document: principles, core shape, packaging, AI policy, compatibility,
   hardware, governance, and an honest list of what is still open.
+- [The skeleton walk](SKELETON.md) — the system as a whole: power-on
+  to shell, layer by layer, then one ordinary act traced end to end.
+  Read this to see how the components compose.
 
 ## Document status
 
@@ -28,6 +31,7 @@ where the design is open, the documents say so.
 |---|---|
 | [Principles & philosophy](PRINCIPLES.md) | Settled, living |
 | [Architecture design](ARCHITECTURE.md) | Draft — 2026-11-22, living |
+| [The skeleton walk](SKELETON.md) | Approved — 2026-11-23, living |
 | [Transport Chain](docs/transport-chain-2026-11-14.md) | Endorsed design |
 | [Repetition Chain — recurring updates test](docs/repetition-chain-updates-test-2026-11-14.md) | Filed test candidate |
 | [AI policy chain](docs/ai-policy-chain-candidate-2026-11-14.md) | Candidate, with 2026-11-20 guardrails addendum |
