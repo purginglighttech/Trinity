@@ -31,7 +31,7 @@ These govern every decision below. A principle stated here changes only on a str
 
 Trinity does not have a kernel in the conventional monolithic sense. Its core is a set of named, anchored components — a component that can't carry a name isn't loadbearing.
 
-- **Garmr** — a minimal microkernel (12 syscalls). Deliberately small: the less that runs privileged, the less that can be maliciously edited into unauthorized access.
+- **The kernel** — a minimal microkernel (12 syscalls). Deliberately small: the less that runs privileged, the less that can be maliciously edited into unauthorized access.
 - **Hel** — security logging and forensics. Hel keeps the system's only track record, and it stores **metadata, not content**, so the audit trail itself is not an attack surface. Post-quantum-only cryptography throughout.
 - **Fangs** — one Fang per hardware target. Each Fang serves only its own hardware's API/ABI. A Fang is how the system meets a specific machine; swapping hardware means installing the new SoC's Fangs, booting, verifying, and retiring the unneeded Fangs last.
 - **Chains — the meta-libOS layer.** The Chains *are* the meta-libOS: a layer of specialized modules, one job each, communicating over a capability token chain (unforgeable tokens; a single auditable path for every privileged action). The meta-libOS holds no operating-system functions of its own — it sends signals to Fangs and inherits nothing. Collected libOS designs were studied for a decade; the completion is a layer that coordinates without absorbing. Named Chains so far: the **Transport Chain** (capability-mediated movement of data and files), the **Repetition Chain** (recurring work, with recurring software updates as its filed test case), and the **AI Chain** (the boundary every AI crosses to act on the system — see §6).
@@ -91,7 +91,7 @@ Support follows the Arch model: community support built on exhaustive documentat
 | Area | Status |
 |---|---|
 | Principles (§2) | Settled — change-controlled, revisable only on a strong case |
-| Core shape: Garmr, Hel, Fangs, Chains (= the meta-libOS layer) (§3) | Settled in structure; component detail in progress |
+| Core shape: the kernel, Hel, Fangs, Chains (= the meta-libOS layer) (§3) | Settled in structure; component detail in progress |
 | Transport Chain | Endorsed — filed design |
 | Repetition Chain | Filed test candidate (recurring software updates) |
 | Software layout, Mimir, versioned addresses (§4) | Settled in design |

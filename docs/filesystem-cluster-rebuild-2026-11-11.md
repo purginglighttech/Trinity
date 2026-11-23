@@ -164,7 +164,7 @@ the user layer above the filesystem.
 - On-disk format stability contract: a filesystem's format is
   forever in a way APIs are not — what is the migration story
   when the format must change?
-- Layer placement: how does the filesystem sit against Garmr /
+- Layer placement: how does the filesystem sit against the kernel /
   the Fang layer, and what does Hel's metadata-only audit mean
   for filesystem events?
 - Snapshot/history retention policy: HAMMER-style history is

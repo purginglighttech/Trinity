@@ -3,7 +3,7 @@
 **Don't trust my claims about the system — examine it yourself.**
 
 Trinity is a unified platform under design at Purging Light Tech: a
-reimagined operating system (the Garmr microkernel, with Hel, Fangs, and
+reimagined operating system (a minimal microkernel, with Hel, Fangs, and
 the Chains — the meta-libOS layer), the MKUltra programming language
 (Maia, compiled; Koda, interpreted), and Mimir, its native package
 manager — co-designed with Ymir, a RISC-V system-on-chip.

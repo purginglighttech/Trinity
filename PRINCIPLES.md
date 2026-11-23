@@ -73,3 +73,11 @@ lives — built in, not bolted on.
     not just about the kernel ABI; the user's workflow is a contract.
     Security, modularity, and concurrency never get to bill the user in
     broken workflows.
+15. **TOML source for every component.** Every component built by us
+    for the system carries a TOML source document: the hand-edited TOML
+    is that component's single source of truth, and everything else —
+    configuration, renderings, the build itself — is generated from it,
+    never hand-edited into disagreement. Even the Fangs built for Ymir
+    depend on the same TOML as Ymir. If everything has a TOML source,
+    the system is rebuilt for a new machine from source — compatibility
+    lives in the source layer, not the binary layer.
