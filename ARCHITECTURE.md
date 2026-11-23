@@ -31,7 +31,7 @@ These govern every decision below. A principle stated here changes only on a str
 
 Trinity does not have a kernel in the conventional monolithic sense. Its core is a set of named, anchored components — a component that can't carry a name isn't loadbearing.
 
-- **The kernel** — a minimal microkernel (12 syscalls). Deliberately small: the less that runs privileged, the less that can be maliciously edited into unauthorized access.
+- **The kernel** — a minimal microkernel (12 syscalls: isolation, protection, and scheduling — the irreducible mechanics). Deliberately small: the less that runs privileged, the less that can be maliciously edited into unauthorized access.
 - **Hel** — security logging and forensics. Hel keeps the system's only track record, and it stores **metadata, not content**, so the audit trail itself is not an attack surface. Post-quantum-only cryptography throughout.
 - **Fangs** — one Fang per hardware target. Each Fang serves only its own hardware's API/ABI. A Fang is how the system meets a specific machine; swapping hardware means installing the new SoC's Fangs, booting, verifying, and retiring the unneeded Fangs last.
 - **Chains — the meta-libOS layer.** The Chains *are* the meta-libOS: a layer of specialized modules, one job each, communicating over a capability token chain (unforgeable tokens; a single auditable path for every privileged action). The meta-libOS holds no operating-system functions of its own — it sends signals to Fangs and inherits nothing. Collected libOS designs were studied for a decade; the completion is a layer that coordinates without absorbing. Named Chains so far: the **Transport Chain** (capability-mediated movement of data and files), the **Repetition Chain** (recurring work, with recurring software updates as its filed test case), and the **AI Chain** (the boundary every AI crosses to act on the system — see §6).
@@ -39,7 +39,7 @@ Trinity does not have a kernel in the conventional monolithic sense. Its core is
 
 **POSIX is not the constitution.** The foundational domains all tie into POSIX, and POSIX is written in C — adopting it would import C's assumption set as constitutional law. POSIX-shaped software is a guest (see the Compatibility Chain, §7), never the foundation.
 
-**Runtime immutability.** A running module cannot be created, destroyed, or modified at runtime; the running set is fixed. Modules extend by loading verified modules. Updates are stop-and-swap through the package manager, never patch-in-place.
+**Runtime immutability.** A running module cannot be created, destroyed, or modified at runtime; the running set is fixed. Modules extend by loading verified modules. Updates are stop-and-swap through the package manager, never patch-in-place — and the swap point is the user's own restart, under the user's control: staging and verification happen in the background, nothing changes under a running program, and at restart the user's setting governs (notify-and-ask, or auto-move to the new version). LTS deprecations are announced securely over the system message bus, and retiring an old LTS for a new one is the user's decision.
 
 **Correctness by construction.** Pieces are designed so illegal or undesirable states can't be represented. If the bad state can't exist, no rule is needed against it.
 

@@ -7,15 +7,18 @@ A reminder only proves that a timer fired. Software updates prove the whole repe
 
 ## What the test must exercise
 - **Recurrence:** check cadence, missed-run catch-up, retry/backoff, and no duplicate concurrent runs.
-- **Update transaction:** discover → fetch → verify → stage → apply at a safe boundary → verify → commit, or roll back cleanly. No half-applied state.
-- **Module lifecycle contact:** installed vs enabled are separate; running modules are immutable at runtime. A replacement must wait for a disable/reboot/session boundary or follow the established conflict path.
+- **Update transaction:** discover → fetch → verify → stage → apply at the user's restart → verify → commit, or roll back cleanly. No half-applied state. (The safe boundary is the user's restart — settled 2026-11-23; see the settled posture below.)
+- **Module lifecycle contact:** installed vs enabled are separate; running modules are immutable at runtime. A staged replacement waits for the user's close-and-restart; at restart the user's setting governs (notify-and-ask, or auto-move). Nothing is swapped under a running program.
 - **Policy contact:** active-work protection, resource thrift (CPU/bandwidth windows), deferral, and which update classes — if any — require explicit user approval before applying.
 - **Audit:** every scheduled check, source, version delta, deferral, failure, and result is enumerable through the Chain. A failed or skipped run stays visible; silence is not a result.
 - **Failure behaviour:** partial failure rolls back or holds at the last verified state and reports; the recurrence continues from a known state rather than compounding the failure.
 
+## Settled posture (Chris, 2026-11-23)
+- **Default posture:** check, stage, and verify in the background; the user keeps running their version until they decide to close and restart it. At restart the user's setting governs — notify that a new version is available and ask whether to use it, or auto-move to the new version on restart. The control belongs to the user.
+- **LTS exception:** when a user's LTS version is deprecated, the system securely messages them on the system message bus that the version has been deprecated and that on app restart they will need to be using an updated version — then asks whether they want to retire the old LTS in favor of the new LTS. The decision is the user's.
+- **Safe application boundary:** the user's restart. Nothing changes mid-session.
+
 ## Open questions for the design pass
-- Default posture: check-and-stage with user-applied, check-and-apply within policy, or class-dependent?
 - Do security updates get a different approval/deferral class?
-- What is the safe application boundary for each module class — immediate, session restart, full reboot?
 - How many prior versions are retained for rollback?
 - In a portable cluster, are updates per-node independent, staggered, or orchestrated from one node?
