@@ -503,6 +503,9 @@ the harness always prompts. That solves the prompt issue.**
   conversational flow, because in the harness shape the
   secret never enters a flow — prompts carry decisions, not
   data entry, and sign-in belongs to secure stores, never to
-  the prompt surface. (Whether Chain-level storage
-  enforcement is still also wanted is a separate question,
-  not closed by this candidate.)
+  the prompt surface. (Clarification, Chris, same pass: "We
+  don't have chain-level storage yet" — the storage
+  enforcement the 2026-11-20 extension pointed at presupposes
+  a chain-level storage capability that does not exist in the
+  design yet, so there is nothing to keep or retire; it is an
+  unbuilt piece, noted as a gap, not a pending decision.)
