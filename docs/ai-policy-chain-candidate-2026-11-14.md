@@ -318,19 +318,37 @@ publishing the method fixes both problems at once: copiers
 inherit the model, and application chains built on the method
 no longer stand outside it.
 
+## Solved forks
+
+- **Who watches Hel? — SOLVED (confirmed by Chris, 2026-11-23:
+  "solved from earlier conversations").** History (Chris,
+  2026-11-14, ~23:24 PT): "Hel itself was originally checked by
+  the system itself but that was before the design of the
+  system AI." The original arrangement — the system checking
+  Hel itself — predates the system AI's existence in the
+  design. The resolution is the watcher-regress proposal of
+  2026-11-14 (above), now confirmed as the answer:
+  - **Mutual monitoring.** The system AI, sitting at the Hel
+    level and specialized for systems monitoring, does take
+    over the checking of Hel — and Hel checks the system AI
+    in return. Each watches the other for anomalies; neither
+    is the other's superior.
+  - **The regress bottoms out at mechanism, not at another
+    watcher.** Below both sits the boot fingerprint, stored
+    at kernel level, and the dumb watchdog: if the fingerprint
+    changes, the system halts automatically. The watchdog is
+    not an AI and exercises no judgment — it is the non-AI
+    terminus that answers "what checks the system AI?" without
+    opening another regress.
+  - The operator remains the judgment layer above both.
+
 ## Open forks (Chris to rule)
 
-- **Who watches Hel?** History (Chris, 2026-11-14, ~23:24 PT):
-  "Hel itself was originally checked by the system itself but
-  that was before the design of the system AI." The original
-  arrangement — the system checking Hel itself — predates the
-  system AI's existence in the design, so it cannot be assumed
-  to still hold. Live form of the question: does the system AI,
-  now sitting at the Hel level and specialized for systems
-  monitoring, take over the checking of Hel — and if so, what
-  checks the system AI? (Also still open: the operator's view
-  of the Hel level — same audit stream, or a Hel-level record
-  of its own?)
+- **The operator's view of the Hel level:** does the operator
+  read the same audit stream Hel keeps, or does the Hel level
+  keep a record of its own for the operator? (Split out of the
+  who-watches-Hel fork when that fork was solved, 2026-11-23;
+  this half remains open.)
 - **Whose permission** gates the quarantine recommendation —
   the operator's directly, or a standing approval class the
   operator sets in advance (cf. the approval-classes question
