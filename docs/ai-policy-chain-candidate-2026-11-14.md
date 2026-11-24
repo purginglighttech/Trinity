@@ -52,6 +52,20 @@ Hel level — never because of *who wrote it*. The filter does
 not modify based on who is affected, and it does not modify
 based on who authored the AI either.
 
+**The one exception, and why it is not one (Chris, same pass,
+2026-11-23):** the only chain our own software does not need
+to be gated through right now is the Compatibility Chain.
+That is not a first-party pass — it is the chain's
+population. The Compatibility Chain exists to host foreign,
+source-less software; native software is cleared past it by
+construction, because we have the source (the TOML-source
+consequence, 2026-11-23), so there is nothing for a gate to
+inspect. Every other chain gates our software exactly as it
+gates anyone's. And the qualifier is his: *right now* — the
+exemption holds exactly as long as native software is
+source-built; a native component without source would be a
+guest, and guests go through the chain.
+
 ## Relation to existing material
 
 - **Agent authority bounds (2026-11-11) + 2026-11-14 addendum:**
