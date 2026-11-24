@@ -469,3 +469,40 @@ enforcement is a placeholder for boundary enforcement that
 does not depend on the AI at all. By the auditability
 axiom, "enforces the boundaries" must be demonstrable, not
 vendor-claimed.
+
+## Candidate solution — our own harness (Chris, 2026-11-23)
+
+Chris's status, preserved: "I think I might have a
+solution" — a candidate, offered for the record, promotion
+his call.
+
+**Create our own harness. Run the AI through the harness;
+the harness always prompts. That solves the prompt issue.**
+
+- **The harness is the user's surface.** The user does not
+  hand things to an AI in free conversation; the AI runs
+  inside a harness we control, and every step that needs the
+  user surfaces as a prompt through the harness. A prompt is
+  a structured decision point, not a chat box — there is no
+  conversational surface for a credential to be pasted into,
+  so the failure the 2026-11-20 addendum guards against has
+  nowhere to happen. The guardrail is the shape of the
+  surface, not a rule the user must remember.
+- **Multi-model, concurrent is fine.** The harness can hold
+  multiple models and use them concurrently — the harness is
+  the seat the committee work (2026-11-21/22) sits in: one
+  gated surface, several independent models behind it.
+- **The chain still applies.** The harness is not a bypass:
+  the models running in it are userspace AI, so they traverse
+  the AI policy chain like any other (scope ruling,
+  2026-11-23). The two layers guard two different paths —
+  the harness guards the user's path to the AI, the chain
+  guards the AI's path to the system.
+- Read against the addendum's open problem: enforcement no
+  longer has to recognize secure data in transit across a
+  conversational flow, because in the harness shape the
+  secret never enters a flow — prompts carry decisions, not
+  data entry, and sign-in belongs to secure stores, never to
+  the prompt surface. (Whether Chain-level storage
+  enforcement is still also wanted is a separate question,
+  not closed by this candidate.)
