@@ -220,6 +220,16 @@ into a chain of claims. Parent/child keeps one holder, one ceiling,
 and one revocation point per tree, which is what makes the three
 review questions above answerable end to end.
 
+**Attempts are Hel-flaggable events (Chris, 2026-11-23).** Because
+delegation is unrepresentable by construction, the request itself
+is the signal: if a module asks for a token re-grant, or offers its
+token to another module, Hel flags the attempt in the audit record
+— which module, which token, which target, when. A module that
+asks is either built wrong, compromised, or reaching past its
+ceiling, and all three are things the operator needs to see.
+Refusal is silent mechanics; the attempt is evidence, and evidence
+is Hel's whole job.
+
 ## Open questions (parked, not answered)
 
 - Ceiling granularity: per-agent, per-task, per-session — or all
