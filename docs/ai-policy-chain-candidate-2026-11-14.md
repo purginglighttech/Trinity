@@ -30,6 +30,19 @@ chain."
    traversal is what enforces it, and the audit record is a
    byproduct of traversal rather than a separate logging step.
 
+## Scope ruling: all userspace AI (Chris, 2026-11-23)
+
+**All AI that runs in userspace must use the AI policy chain.**
+No exceptions and no alternate path: any AI executing in
+userspace — guest AI, user-installed AI, third-party agents —
+reaches the system only by traversing the chain. Userspace is
+the line. The system AI is not userspace AI — it sits at the
+Hel level, outside the system it monitors, with its guardrails
+built in by construction (see the fork ruling above) — so this
+ruling does not reach it, and the two rules together leave no
+AI outside a guardrail: native AI carries them in its design,
+userspace AI meets them in the chain.
+
 ## Relation to existing material
 
 - **Agent authority bounds (2026-11-11) + 2026-11-14 addendum:**
