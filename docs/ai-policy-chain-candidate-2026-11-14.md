@@ -43,6 +43,15 @@ ruling does not reach it, and the two rules together leave no
 AI outside a guardrail: native AI carries them in its design,
 userspace AI meets them in the chain.
 
+**Provenance is not an exemption (Chris, same pass,
+2026-11-23):** even AI Purging Light Tech develops itself, if
+it is built to run in userspace, must use the AI chain. Being
+ours confers no bypass and no lighter path. The only AI
+outside the chain is outside because of *where it sits* — the
+Hel level — never because of *who wrote it*. The filter does
+not modify based on who is affected, and it does not modify
+based on who authored the AI either.
+
 ## Relation to existing material
 
 - **Agent authority bounds (2026-11-11) + 2026-11-14 addendum:**
