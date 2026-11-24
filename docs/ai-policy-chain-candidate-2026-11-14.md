@@ -8,10 +8,11 @@ principle. Promotion is Chris's call, in the Trinity design thread.
 
 ## His statement, verbatim
 
-"The system AI should probably sit at the Hel level because it has
-to be able to monitor the system outside the system but I think it
-might be of interest to have a chain that enforces the AI policies
-and AI can only access the system through that chain"
+"The system AI should probably sit at the Hel level, because it
+has to be able to monitor the system outside the system. But I
+think it might be of interest to have a chain that enforces the
+AI policies, and AI can only access the system through that
+chain."
 
 ## The two moves
 
@@ -51,16 +52,14 @@ and AI can only access the system through that chain"
 
 ## Ruling on the first fork (Chris, 2026-11-14, ~23:22 PT)
 
-**The system AI does not use the chain.** Verbatim: "No the
-system AI shouldn't use the chain - it needs to be designed
-from the ground up itself with its own guardrails built into
-it, but it's going to also need to be specialized just for
-systems work that's it's responsibility to work as a monitoring
-and modification tool to find and propose fixes that could
-cause component failures before they do and Hel has to
-quarantine them but I feel it should also be able to recommend
-to Hel (after getting permission) if a component needs to be
-quarantined to implement fixes and restart"
+**The system AI does not use the chain.** It is designed from
+the ground up with its own guardrails built into it, and
+specialized just for systems work: a monitoring and
+modification tool that finds and proposes fixes for conditions
+that could cause component failures before they do. Hel does
+the quarantining — but the system AI may also recommend to Hel
+(after getting permission) that a component be quarantined, so
+fixes can be implemented and the component restarted.
 
 Two trust models, by origin:
 
@@ -118,12 +117,12 @@ them to a verdict.
 
 ## Proposed resolution of the watcher regress (Chris, 2026-11-14, ~23:29 PT)
 
-Verbatim: "I think there could be something as simple as on
-boot a digital fingerprint is created that gets stored at
-kernel level and a watchdog monitors whether or not that
-fingerprint changes if it does the system needs to be
-automatically halted - meanwhile Hel and the system ai will
-also monitor each other for any anomalies"
+Verbatim: "I think there could be something as simple as: on
+boot, a digital fingerprint is created that gets stored at
+kernel level, and a watchdog monitors whether or not that
+fingerprint changes; if it does, the system needs to be
+automatically halted — meanwhile Hel and the system AI will
+also monitor each other for any anomalies."
 
 Three layers, each a different kind of check:
 
@@ -143,9 +142,9 @@ Three layers, each a different kind of check:
    fingerprint/watchdog provides.
 
 **Scope widened (Chris, 2026-11-14, ~23:33 PT):** "That's true
-for every system update though anything that changes from
-chain down we need a secure way to signal them as official
-changes so Hel or the systemAI doesn't quarantine them as
+for every system update, though: anything that changes from
+the chain down, we need a secure way to signal them as official
+changes, so Hel or the systemAI doesn't quarantine them as
 unauthorized changes." The problem is not specific to the boot
 fingerprint: **every change propagating down the chain needs a
 secure "official change" signal** that the watchers (Hel, the
@@ -174,9 +173,9 @@ over.
 
 ## Ripple: token generation at package install (Chris, 2026-11-14, ~23:36 PT)
 
-Verbatim: "And as it gets solidified more it will touch more
-because those tokens will have to be generated at package
-install so it has to be built into the packaging system"
+As the design solidifies, this reaches further: the tokens
+will have to be generated at package install, so token
+generation has to be built into the packaging system.
 
 Consequence: the packaging system moves inside the trust path.
 Install becomes a token-minting event — a package's changes are
@@ -217,11 +216,11 @@ function.
 
 ## Chain jurisdiction rule (Chris, 2026-11-15, ~00:19 PT — stated generally, applies to all chains)
 
-Verbatim: "And these chains are system specific people can
-still create their own chains for their applications but if it
-touches a domain that is controlled by a system chain the
-application must use the system chains for that access it
-cannot be granted outside its specific chain"
+Verbatim: "And these chains are system-specific. People can
+still create their own chains for their applications, but if
+it touches a domain that is controlled by a system chain, the
+application must use the system chains for that access; it
+cannot be granted outside its specific chain."
 
 - **System chains are the system's** — core components with
   exclusive jurisdiction over their domains.
@@ -235,14 +234,14 @@ cannot be granted outside its specific chain"
   composes with the system chain at the boundary; it never
   bypasses it. (Layer jurisdiction applied to chains: a
   domain's owner is the only door into it.) Rationale, Chris's
-  words: "that's a security thing we can't be have side
+  words: "that's a security thing we can't have side
   loading through non-system chains" — a non-system chain
   granting access into a controlled domain *is* sideloading.
 
   **Correction (Chris, 2026-11-15, ~00:22 PT), replacing the
   assistant's earlier gloss:** audit is NOT what sideloading
-  bypasses. "All chains by their very nature are auditable
-  it's pretty much a specification of what a chain is that's
+  bypasses. "All chains by their very nature are auditable;
+  it's pretty much a specification of what a chain is — that's
   why we moved core OS things down into them." Auditability is
   definitional to chain-ness — any chain, application chains
   included, produces its record by construction; that is the
@@ -251,10 +250,10 @@ cannot be granted outside its specific chain"
   *authorization* — the domain's own token minting and
   approval. The access would be perfectly logged and still
   unauthorized: visibility is not permission. Sharpened by
-  Chris (~00:24 PT): the record exists, "but it's the fact
-  that it bypasses the tokens and still looks like permitted
-  actions is where it breaks the security model" — because
-  chains produce uniform records, the unauthorized entry
+  Chris (~00:24 PT): the record exists — what breaks the
+  security model is that the access bypasses the tokens and
+  still looks like permitted action. Because chains produce
+  uniform records, the unauthorized entry
   *resembles* a legitimate one. The failure is camouflage: it
   poisons the audit's evidentiary value, the property the
   whole model rests on ("if it can't be audited as truth then
@@ -264,12 +263,12 @@ cannot be granted outside its specific chain"
 
 ## Mitigation: signature without token (Chris, 2026-11-15, ~00:28 PT)
 
-Verbatim: "But there's a place that can be caught and it's
-actually in several places - Hel and the SystemAI can both
-catch it because they have log monitoring - and a call for a
-system chain provided service will have a specific signature
+Verbatim: "But there's a place that can be caught, and it's
+actually in several places — Hel and the SystemAI can both
+catch it, because they have log monitoring — and a call for a
+system-chain-provided service will have a specific signature;
 if you see that signature get issued without a token
-associated it gets mitigated"
+associated, it gets mitigated."
 
 - **Detection points are plural:** Hel and the SystemAI both
   monitor the logs — the same mutual-monitoring layer that

@@ -2,7 +2,7 @@
 
 Status: **candidate principle** — filed from the main-chat session
 of Wed Nov 11, 2026 (graves shift), on Chris's instruction
-("Let's add that to the Trinity review too that's important").
+("Let's add that to the Trinity review too — that's important").
 Not promoted into GOAL.md's Principles & Philosophy; promotion is
 Chris's call, in the Trinity design thread. Kept separate from
 `certificate-trust-pipeline-2026-11-11.md` (filed the same night):
@@ -12,9 +12,9 @@ are different principles and are recorded as such.
 
 ## The position, in Chris's words
 
-"I don't disagree that agents are the future I'm exploring their
-use in Trinity but what I disagree with is giving full control
-to agents."
+"I don't disagree that agents are the future. I'm exploring
+their use in Trinity, but what I disagree with is giving full
+control to agents."
 
 Agents are expected citizens of the platform. **Full control is
 not a configuration the platform offers.**
@@ -40,9 +40,9 @@ moment is not free to renegotiate.
 
 ## The compromise, stated (Chris, Nov 11, ~03:21 PT)
 
-"It seems a valid compromise I want to be modern to be modern I
-have to adopt certain things but I absolutely refuse to hand over
-control of my system to any outside force."
+"It seems a valid compromise. I want to be modern. To be
+modern I have to adopt certain things, but I absolutely refuse
+to hand over control of my system to any outside force."
 
 Adoption is not surrender. Modernity is admitted *as a guest under
 the constitution*: new capabilities (agents included) enter the
@@ -175,8 +175,8 @@ operating system."
 
 His statement, verbatim: "I know that every AI that runs on
 Trinity needs to have every action that acts against the system
-gated by the approval process we mapped before propose sign off
-implement."
+gated by the approval process we mapped before — propose, sign
+off, implement."
 
 Read against this file: the three review questions set the
 ceiling, the trail, and the revocation path; this addendum
