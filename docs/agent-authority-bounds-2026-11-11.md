@@ -188,6 +188,38 @@ holds against an adversarial model); the approval process is
 the authority half from above. Neither half substitutes for
 the other.
 
+## Settled — delegation (Chris, 2026-11-23)
+
+The parked question was: may an agent holding a token delegate a
+narrower token to another agent, and what does the evidence trail
+need to show for the chain to remain auditable end to end?
+
+**Answer: no delegation.** An agent holding a token cannot mint or
+hand off a narrower token to another agent. Token authority enters
+an agent tree at exactly one point — the original grant — and is
+never re-granted sideways.
+
+Where an agent spawns sub-agents, the relation is **parent and
+child process**, not delegation:
+
+- The child holds **no token of its own**. It acts inside the
+  parent's authority and under the parent's ceiling; nothing the
+  child can do exceeds what the parent itself could do.
+- The parent remains the accountable holder. Every child action
+  lands in the evidence trail under the parent's token, recorded
+  as the child's act on the parent's instruction — the trail is a
+  tree rooted at one grant, not a chain of re-grants.
+- Revocation stays mechanical: revoking the parent's token ends
+  the whole tree. There is no graph of delegated holders to hunt
+  down, because delegation never created one.
+
+The reasoning is the auditability axiom applied to authority: a
+delegation chain launders provenance — each hop blurs "on whose
+instruction" a little further, and the trail degrades from a record
+into a chain of claims. Parent/child keeps one holder, one ceiling,
+and one revocation point per tree, which is what makes the three
+review questions above answerable end to end.
+
 ## Open questions (parked, not answered)
 
 - Ceiling granularity: per-agent, per-task, per-session — or all
@@ -196,6 +228,3 @@ the other.
   judgment-layer review stay real (not a rubber stamp) when the
   operator is exhausted? Trinity is designed to survive its
   operator at his worst; the approval path must be too.
-- Delegation chains: may an agent holding a token delegate a
-  narrower token to another agent, and what does the evidence
-  trail need to show for the chain to remain auditable end to end?
