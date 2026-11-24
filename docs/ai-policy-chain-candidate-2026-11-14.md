@@ -86,6 +86,8 @@ Two trust models, by origin:
   implemented and the component restarted. Detection and
   proposal are the AI's; the quarantine act is Hel's; the
   permission gate sits between recommendation and act.
+  *(Superseded in part, 2026-11-23: no permission gate stands
+  on Hel's act — see Solved forks below.)*
 
 ## Addendum — the SystemAI reports data; Hel decides (Chris, 2026-11-23)
 
@@ -107,8 +109,10 @@ The reporting protocol between them:
   reporter.
 - Read against the quarantine workflow above: a recommendation
   from the SystemAI is a proposal with data attached. Hel's act
-  is grounded in Hel's own reading of that evidence, and the
-  permission gate is unchanged.
+  is grounded in Hel's own reading of that evidence. (The
+  permission wording is corrected by the ruling filed later the
+  same day — see Solved forks: no permission gate stands on
+  Hel's act at all.)
 
 This is the preserve-epistemic-status rule at the architecture
 level: observations stay observations all the way up the chain,
@@ -342,6 +346,21 @@ no longer stand outside it.
     opening another regress.
   - The operator remains the judgment layer above both.
 
+- **Whose permission gates the quarantine? — SOLVED (Chris,
+  2026-11-23): "Hel never needs permission to institute a
+  quarantine — that's the security of the system."** No live
+  operator sign-off and no standing approval class stands
+  between Hel's evidence and Hel's act: quarantine is Hel's
+  own authority, exercised on evidence Hel itself has weighed.
+  The permission language in the 2026-11-14 workflow text
+  governed the SystemAI's recommendation path, not Hel's act —
+  and under the 2026-11-23 reporting protocol the SystemAI
+  sends data, not requests, so nothing in the chain waits on a
+  human who may be asleep, exhausted, or unreachable. A
+  quarantine is protective and reversible; the operator reviews
+  Hel's acts in the audit record, after the fact, at the
+  judgment layer — review is not a precondition.
+
 ## Open forks (Chris to rule)
 
 - **The operator's view of the Hel level:** does the operator
@@ -349,10 +368,6 @@ no longer stand outside it.
   keep a record of its own for the operator? (Split out of the
   who-watches-Hel fork when that fork was solved, 2026-11-23;
   this half remains open.)
-- **Whose permission** gates the quarantine recommendation —
-  the operator's directly, or a standing approval class the
-  operator sets in advance (cf. the approval-classes question
-  in the Repetition Chain updates test)?
 - **Uniform or tiered (guest side):** one chain for all guest
   AI, or does read/monitoring access traverse a different path
   than action access?
