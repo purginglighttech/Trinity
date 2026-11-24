@@ -88,6 +88,34 @@ Two trust models, by origin:
   proposal are the AI's; the quarantine act is Hel's; the
   permission gate sits between recommendation and act.
 
+## Addendum — the SystemAI reports data; Hel decides (Chris, 2026-11-23)
+
+Stated in the main chat while settling the agent-authority
+delegation question, in the same pass that fixed the division of
+labor: **the SystemAI is a tool to raise the threshold for
+stability; Hel is security.**
+
+The reporting protocol between them:
+
+- Anything the SystemAI flags that touches security is
+  **reported to Hel**. The report carries **all relevant
+  information — just the data**. No verdict rides along with it;
+  the SystemAI's claim arrives as a claim, labeled as one.
+- **Hel does not take the SystemAI's word for it.** Hel evaluates
+  the evidence itself, takes the action the evidence supports,
+  and decides whether further action is needed. The judgment is
+  Hel's, re-derived from the data — never inherited from the
+  reporter.
+- Read against the quarantine workflow above: a recommendation
+  from the SystemAI is a proposal with data attached. Hel's act
+  is grounded in Hel's own reading of that evidence, and the
+  permission gate is unchanged.
+
+This is the preserve-epistemic-status rule at the architecture
+level: observations stay observations all the way up the chain,
+and only the component whose job the decision is may promote
+them to a verdict.
+
 ## Proposed resolution of the watcher regress (Chris, 2026-11-14, ~23:29 PT)
 
 Verbatim: "I think there could be something as simple as on
