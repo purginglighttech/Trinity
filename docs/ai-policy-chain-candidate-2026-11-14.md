@@ -448,7 +448,12 @@ prevent AIs from storing secure data outside of a secure
 store. Chris's epistemic status, preserved: "I don't know
 how yet but it will be something when I read more into how
 AIs work that I'm sure we can figure out" — direction
-stated, mechanism open.
+stated, mechanism open. (Forward note, 2026-11-23: the
+mechanism candidate arrived three days later, after the
+harness study — see "Candidate solution — our own harness"
+below. Chris, reading this note back: "I just noticed my
+note about how to combine the chain and prompting the
+user.")
 
 Placement logic: the Chain is the single auditable path
 between an AI and the system, so a rule about where data
