@@ -507,5 +507,11 @@ the harness always prompts. That solves the prompt issue.**
   don't have chain-level storage yet" — the storage
   enforcement the 2026-11-20 extension pointed at presupposes
   a chain-level storage capability that does not exist in the
-  design yet, so there is nothing to keep or retire; it is an
-  unbuilt piece, noted as a gap, not a pending decision.)
+  design yet, so there is nothing to keep or retire.
+  Mechanism (Chris, same pass): chains each implement the
+  Fangs they need — a chain is a meta-libOS — so if AI needs
+  storage, that capability is added to the chain as a Fang it
+  implements. Chain-level storage is therefore not a separate
+  subsystem waiting to be built; it is an on-demand capability
+  the AI chain grows when its job requires it, like any other
+  Fang a chain needs.)
